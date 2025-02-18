@@ -1,0 +1,21 @@
+# Smithery configuration file: https://smithery.ai/docs/config#smitheryyaml
+
+startCommand:
+  type: stdio
+  configSchema:
+    # JSON Schema defining the configuration options for the MCP.
+    type: object
+    required:
+      - n8nHost
+      - n8nApiKey
+    properties:
+      n8nHost:
+        type: string
+        description: The URL of the n8n instance.
+      n8nApiKey:
+        type: string
+        description: The API key for accessing the n8n instance.
+  commandFunction:
+    # A function that produces the CLI command to start the MCP on stdio.
+    |-
+    (config) => ({command: 'node', args: ['build/index.js'], env: { N8N_HOST: config.n8nHost, N8N_API_KEY: config.n8nApiKey }})
