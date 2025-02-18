@@ -1,4 +1,5 @@
 # n8n MCP Server
+[![smithery badge](https://smithery.ai/badge/@illuminaresolutions/n8n-mcp-server)](https://smithery.ai/server/@illuminaresolutions/n8n-mcp-server)
 
 An MCP server that provides access to n8n workflows, executions, credentials, and more through the Model Context Protocol. This allows Large Language Models (LLMs) to interact with n8n instances in a secure and standardized way.
 
@@ -12,6 +13,14 @@ An MCP server that provides access to n8n workflows, executions, credentials, an
 - Secure access through n8n API key authentication
 
 ## Installation
+
+### Installing via Smithery
+
+To install n8n MCP Server for Claude Desktop automatically via [Smithery](https://smithery.ai/server/@illuminaresolutions/n8n-mcp-server):
+
+```bash
+npx -y @smithery/cli install @illuminaresolutions/n8n-mcp-server --client claude
+```
 
 ### Prerequisites
 
